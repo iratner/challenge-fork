@@ -15,7 +15,7 @@ Let us know if you have any questions, and good luck!
 
 The requirements for your application are as follows:
 
-1) Displays a list of at least four XKCD comics, acquired via the XKCD API endpoint: https://any-api.com:8443/http://xkcd.com/{COMIC_ID_GOES_HERE}/info.0.json (see documentation over [here](https://any-api.com/xkcd_com/xkcd_com/console/_comicId_info_0_json/GET)).
+1) Displays a list of at least four XKCD comics, acquired via the XKCD API endpoint: `https://any-api.com:8443/http://xkcd.com/{COMIC_ID_GOES_HERE}/info.0.json` ([documentation](https://any-api.com/xkcd_com/xkcd_com/console/_comicId_info_0_json/GET)).
 2) Includes the title, date published, and image for each comic.
 3) The list of comics is arranged in a grid.
 4) Comics are sorted with the most recent comics first.
