@@ -1,68 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Rhove JavaScript Code Challenge Starter
 
-## Available Scripts
+Welcome to Rhove's JavaScript code challenge! We've already created all the boilerplate for you, so you can spend your time on solving problems rather than on setting up.
 
-In the project directory, you can run:
+You have one week to complete this challenge and it should take you **no longer than 4 hours**. At the four-hour mark, feel free to write down any additional work you would have completed if the app was meant for production and send that along with your code challenge submission. Let us know if you have any questions, and good luck!
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    $ npm i
+    $ npm start
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Running tests
 
-### `npm test`
+    $ npm test
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Challenge Instructions
 
-### `npm run build`
+The requirements for your application are as follows:
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1) Displays a list of four or more XKCD comic strips, acquired via the XKCD API endpoint: https://xkcd.com/json.html
+2) For each comic, displays its image, title, and date published.
+3) The list of comics is arranged in a grid.
+4) Includes a checkbox that, when checked, sorts the comic strips by most recent to least recent.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Evaluation Criteria
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Includes unit tests.
+* `npm test` runs all existing unit tests.
+* Runs in Chrome. Don't worry about browser compatibility for this challenge.
+* Includes more than one commit, each with a thoughtful commit message.
+* Work is logically grouped into commits.
+* `npm i` downloads all dependencies.
+* `npm start` runs the application.
+* React components are organized into separate files.
+* No console errors.
+* Meets the challenge requirements.
 
-### `npm run eject`
+## Code Challenge Submission
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Send a link to your GitHub repository to your contact at Rhove, and you're all done!
