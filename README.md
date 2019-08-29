@@ -1,4 +1,4 @@
-# Rhove JavaScript Code Challenge Starter
+# JavaScript Code Challenge
 
 Welcome to Rhove's JavaScript code challenge! We've already created all the boilerplate for you, so you can spend your time solving problems rather than setting up.
 
