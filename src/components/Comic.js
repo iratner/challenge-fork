@@ -1,8 +1,12 @@
 import React from 'react';
 import './css/comic.css';
 
-export const Comic = (props) => (
-   <div class="comic">
+export const Comic = ({img}) => {
+   // console.log(img);
 
-   </div>
-)
+   return (
+      <div class="comic">
+         <img src={img}></img>
+      </div>
+   );
+}

@@ -8,14 +8,20 @@ body {
 }
 
 body * {
-  box-sizing: border-box;
+  box-sizing: border-box;  
 }
 
-html, body {
+html, body, #root {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 code {
