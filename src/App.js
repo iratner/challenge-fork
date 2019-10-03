@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
 
+import Comics from './views/Comics';
+
 function App() {
-  return <p>Your code goes here!</p>;
+  return <Comics/>;
 }
 
 export default App;
