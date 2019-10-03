@@ -25,7 +25,6 @@ export default class Comics extends React.Component{
                comics: [...this.state.comics, ...this.processDate(comics)],
                requested: true
             })
-            console.log(this.state);
          }).catch( err => {
             this.setState({ 
                requested: true
@@ -34,11 +33,17 @@ export default class Comics extends React.Component{
       
    }
 
+   /**
+    * Turns the date into a more readable format
+    */
    formatDate = (date) => {
       const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
       return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;;
    }
 
+   /**
+    * Adds milliseconds to the comic for sorting, and adds a human readable, formatted date
+    */
    processDate = (comics) => {
       comics.forEach( comic => {
          const date = new Date(comic.year, comic.month -1, comic.day);

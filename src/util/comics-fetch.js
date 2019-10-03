@@ -40,7 +40,6 @@ export async function comicsFetch (requestName, params) {
 
       try {
          data = await requests[requestName](params);
-         console.log(data);
       } catch(e) {
          console.error(`Something went wrong with server request: ${requestName}`, e);
       } finally {

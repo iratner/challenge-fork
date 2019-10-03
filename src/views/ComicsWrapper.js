@@ -1,6 +1,7 @@
 import React from 'react';
 import { Comic } from '../components';
 
+// Just a fallback comic stored locally if nothing comes back from the API call
 const FALLBACK = {
    alt: "Don't we all.",
    day: "1",
