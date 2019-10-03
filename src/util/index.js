@@ -1,0 +1,1 @@
+export { comicsFetch, REQUESTS } from './comics-fetch';
