@@ -22,7 +22,7 @@ export default class Comics extends React.Component{
       comicsFetch(REQUESTS.GET_COMICS, {start: requestFromId, end: requestFromId + requestQuantity})
          .then( comics => {
             this.setState({ 
-               comics: [...this.state.comics, ...comics],
+               comics: [...this.state.comics, ...this.processDate(comics)],
                requested: true
             })
             console.log(this.state);
@@ -32,6 +32,23 @@ export default class Comics extends React.Component{
             })
          });
       
+   }
+
+   formatDate = (date) => {
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;;
+   }
+
+   processDate = (comics) => {
+      comics.forEach( comic => {
+         const date = new Date(comic.year, comic.month -1, comic.day);
+         comic.milliseconds = date.getTime();
+         comic.date = this.formatDate(date);
+
+
+      });      
+
+      return comics;
    }
 
    renderComics = () => {

@@ -25,7 +25,7 @@ export async function comicsFetch (requestName, params) {
             const comic = await requests[REQUESTS.GET_COMIC]( {id: start++} );
             comics.push(comic);
         }
-
+        
         return comics;
      }
    }

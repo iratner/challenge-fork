@@ -4,7 +4,9 @@ import { Comic } from '../components';
 const FALLBACK = {
    alt: "Don't we all.",
    day: "1",
-   img: "/img/xkcs_1.jpg",
+   img: "/img/xkcd_1.jpg",
+   milliseconds: 1,
+   date: "No one really knows",
    link: "",
    month: "1",
    news: "",
@@ -17,20 +19,35 @@ const FALLBACK = {
 
 
 export default class ComicsWrapper extends React.PureComponent {
-   constructor(props) {
-      super(props);
+   state = {
+      sort: false
    }
 
    render() {
       const { comics } = this.props;
-      console.log(comics);
+      const { sort } = this.state;
+
+      const sortedComics = comics.sort( (a, b) => { 
+         return sort ? a.milliseconds - b.milliseconds : b.milliseconds - a.milliseconds;
+      });
+
       return (
          <div className="comics-wrapper">
+            <div className="sort-comics">
+               <label htmlFor="sort-comics-checkbox">sort in ascending order: 
+                  <input 
+                     onClick={() => this.setState({sort: !sort})} 
+                     name="sort-comics-checkbox" type="checkbox">
+                  </input>
+               </label>
+            </div>
+            <div className="comics-grid">
             {
-               comics.length 
-                  ? comics.map( comic => <Comic key={comic.num} {...comic} />)
-                  : <Comic data={FALLBACK}/>
+               sortedComics.length 
+                  ? sortedComics.map( comic => <Comic key={comic.num} {...comic} />)
+                  : <Comic {...FALLBACK}/>
             }
+            </div>
          </div>
       )
    }
