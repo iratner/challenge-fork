@@ -1,6 +1,5 @@
 import React from 'react';
 import { Comic } from '../components';
-import './css/comics-wrapper.css';
 
 const FALLBACK = {
    alt: "Don't we all.",
@@ -26,10 +25,10 @@ export default class ComicsWrapper extends React.PureComponent {
       const { comics } = this.props;
       console.log(comics);
       return (
-         <div class="comics-wrapper">
+         <div className="comics-wrapper">
             {
                comics.length 
-                  ? comics.map( comic => <Comic {...comic} />)
+                  ? comics.map( comic => <Comic key={comic.num} {...comic} />)
                   : <Comic data={FALLBACK}/>
             }
          </div>

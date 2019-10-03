@@ -2,15 +2,15 @@ import React from 'react';
 
 import { Loader } from '../components';
 import { ComicsWrapper} from './';
-
 import { REQUESTS, comicsFetch} from '../util/';
+import './css/comics.css';
 
 export default class Comics extends React.Component{
    constructor(props) {
       super(props);
       this.state = {
-         requestFromId: 1,
-         requestQuantity: 8,
+         requestFromId: 1000,
+         requestQuantity: 20,
          comics : [],
          requested: false
       }

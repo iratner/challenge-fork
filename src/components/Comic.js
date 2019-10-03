@@ -1,12 +1,14 @@
 import React from 'react';
 import './css/comic.css';
 
-export const Comic = ({img}) => {
+export const Comic = ({img, year, title, alt}) => {
    // console.log(img);
 
    return (
-      <div class="comic">
-         <img src={img}></img>
+      <div className="comic">
+         <div>{title}</div>
+         <div>published {year}</div>
+         <img src={img} alt={alt}></img>
       </div>
    );
 }
